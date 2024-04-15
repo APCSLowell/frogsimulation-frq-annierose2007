@@ -6,7 +6,6 @@ public class FrogSimulation{
 		maxHops = numHops;
 		maxHopsHolder = numHops;  //ignore this, it's used for testing
 	}
-}
 	public boolean simulate(){ 
  		int position = 0;
  		for (int count = 0; count < maxHops; count++){
@@ -29,6 +28,7 @@ public class FrogSimulation{
  		}
  		return (double)countSuccess / num;
 	}
+}
 	private int[] hopValues;
 	private int hopIndex = 0;
 	private int[][] hopValuesMatrix;
