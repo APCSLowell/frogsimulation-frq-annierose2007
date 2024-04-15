@@ -1,25 +1,23 @@
 public class FrogSimulation{
 	private int goalDistance;
 	private int maxHops;
-	
 	public FrogSimulation(int dist, int numHops){
 		goalDistance = dist;
 		maxHops = numHops;
 		maxHopsHolder = numHops;  //ignore this, it's used for testing
 	}
-	
 	public boolean simulate(){ 
-		int position = 0;
+ 		int position = 0;
  		for (int count = 0; count < maxHops; count++){
  			position += hopDistance();
  			if (position >= goalDistance){
  				return true;
-			}
+ 			}
  			else if (position < 0){
  				return false;
  			}
  		}
- 		return false;
+ 	return false;
 	}
 	public double runSimulations(int num){ 
  		int countSuccess = 0;
@@ -27,22 +25,17 @@ public class FrogSimulation{
  			if(simulate()){
  				countSuccess++;
  			}
-		 }
-		 return (double)countSuccess / num;
+ 		}
+ 		return (double)countSuccess / num;
 	}
 }
 	private int[] hopValues;
 	private int hopIndex = 0;
-	
 	private int[][] hopValuesMatrix;
 	private int row=0;
 	private int col=0;
-	
-	
 	private int maxHopsHolder;
 	private String part; 
-	
-	
 	private int hopDistance()
 	{ 
 		if( this.part.equals("A") )
