@@ -85,9 +85,5 @@ public class FrogSimulation{
 		this.hopValuesMatrix = hopValuesMatrix;
 		this.row = 0;
 		this.col = 0;
-	}
-	
-	
-	
-	
-} 
+	}	
+}
